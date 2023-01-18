@@ -14,7 +14,8 @@ RUN yum install -y \
     rh-python36-python
 
 RUN curl -fsSL https://rpm.nodesource.com/setup_lts.x | bash -
-RUN yum install -y nodejs18.12.1
+sudo yum install --assumeyes nodejs
+RUN yum install -y nodejs
 RUN npm install -g yarn
 
 COPY . ./
